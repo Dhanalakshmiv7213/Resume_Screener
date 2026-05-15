@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Screener</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>AI Resume Screener</h1>
+
+        <div class="card">
+
+            <label>Upload Resume (PDF)</label>
+            <input type="file" id="resumeFile">
+
+            <label>Job Description</label>
+            <textarea
+                id="jobDescription"
+                rows="8"
+                placeholder="Paste job description here..."
+            ></textarea>
+
+            <button onclick="analyzeResume()">
+                Analyze Resume
+            </button>
+
+        </div>
+
+        <div class="result-card" id="resultCard">
+            <h2>Analysis Result</h2>
+
+            <p>
+                <strong>Filename:</strong>
+                <span id="filename"></span>
+            </p>
+
+            <p>
+                <strong>Skills:</strong>
+                <span id="skills"></span>
+            </p>
+
+            <p>
+                <strong>Match Score:</strong>
+                <span id="score"></span>%
+            </p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
